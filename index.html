@@ -40,6 +40,7 @@
             }
         }
     </script>
+    
     <style>
         body {
             font-family: 'Prompt', sans-serif;
@@ -70,7 +71,6 @@
 </head>
 <body class="selection:bg-wine-800 selection:text-gold-300 antialiased overflow-x-hidden">
 
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card border-b border-white/5">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold font-serif tracking-wider gold-gradient-text">SUMIT APILA</a>
@@ -81,7 +81,7 @@
                 <a href="#contact" class="hover:text-gold-400 transition-colors">ติดต่อ</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+            <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle Navigation Menu">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
@@ -94,7 +94,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden">
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-wine-800/30 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -105,7 +104,7 @@
                 <div class="relative group">
                     <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-wine-600 via-gold-500 to-wine-900 opacity-70 blur group-hover:opacity-100 transition duration-1000"></div>
                     <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-gold-400/40 p-2 glass-card">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
+                        <img src="https://raw.githubusercontent.com/69202302104-oss/Sumittra-/main/IMG_4709.JPG" 
                              alt="นางสาว สุมิตร์ อภิลา (ปอ)" 
                              onerror="this.src='https://placehold.co/400x400/360c0c/f3d382?text=Sumit+Apila'"
                              class="w-full h-full object-cover rounded-full filter brightness-95 contrast-105">
@@ -145,7 +144,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-20 relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -235,7 +233,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="py-20 relative bg-black/40">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -277,7 +274,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="py-20 relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -335,7 +331,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 relative bg-black/60 border-t border-white/5">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -400,7 +395,7 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close Mobile Menu on Click
+        // Close Mobile Menu on Link Click
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
